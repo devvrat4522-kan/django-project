@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock title %}
+{% block body %}
+	<div style="text-align:center">
+	<h1>Create Account</h1>
+	<form action="create_account" method="post">
+	{% csrf_token %}
+	Username  :  <input type="text" name="gname"><br><br>
+	firstname :  <input type="text" name="fname"><br><br>
+	lastname  :  <input type="text" name="lname"><br><br>
+	Password  :  <input type="password" name="gpass"><br><br>
+	<input id="submit" type="submit" value="create">
+	</form>
+	<h4>{{msg}}</h4>
+	</div>
+
+{% endblock body %}

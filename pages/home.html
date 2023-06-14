@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock title %}
+{% block body %}
+	<div style="text-align:center">
+	<h1><u><i>Director Login page</u></i></h1>
+	<form action="login" method="post">
+	{% csrf_token %}
+	Username :  <input type="text" name="dname"><br><br>
+	Password :  <input type="password" name="dpass"><br><br>
+	<input id="submit" type="submit" value="Login">
+	</form>
+	<h4>{{fail}}</h4>
+	</div>
+
+{% endblock body %}

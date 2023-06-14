@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block head %}
+{% block title %}{% endblock title %}
+{% endblock head %}
+{% block body %}
+	<div>
+		<fieldset>
+			<legend>INSERT ENTRY</legend>
+		<!-- <h1><u><i>Insert Entry</u></i></h1> -->
+		<form action="enter" method="post">
+		{% csrf_token %}
+		<div id="eggo">
+			</form>
+				<div>
+					<label for="guest"> NAME : </label>
+					<input  type="text" name="guest"><br><br>
+				</div>
+				<div>
+					<label for="pur"> PURPOSE : </label>
+					<input  type="text" name="pur"><br><br>
+				</div>
+				<div>
+					<label for="camefrom"> CAMEFROM : </label>
+					<input 	type="text" name="camefrom"><br><br>
+				</div>
+				<div >
+					<input id="submit" type="submit" value="Insert entry">
+				</div>
+			</form>
+		</div>
+		</fieldset>
+	</div>
+	<h4>{{msg}}</h4>
+
+{% endblock body %}

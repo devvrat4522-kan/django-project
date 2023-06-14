@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}check entries{% endblock title %}
+{% block body %}
+	<div >
+		<h2><b>Check Entries</b></h2><br>
+		<a href="dhome"><h3>Return Home</h3><br></a>
+		<table border="1" width="100%">
+		<tr>
+			<th>Sr.No.</th>
+			<th>Intime</th>
+			<th>Extime</th>
+			<th>Guest</th>
+			<th>Purpose</th>
+			<th>From</th>
+		</tr>
+		{% for i in res %}
+		<tr>
+			<td>{{i.id}}</td>
+			<td>{{i.intime}}</td>
+			<td>{{i.extime}}</td>
+			<td>{{i.guest}}</td>
+			<td>{{i.pur}}</td>
+			<td>{{i.camefrom}}</td>
+		</tr>
+		{% endfor %}
+		</table>
+	</div>	
+{% endblock body %}
